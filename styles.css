@@ -190,7 +190,7 @@ button { font: inherit; cursor: pointer; }
   animation: meRise 1.4s var(--spring) .35s both;
   filter: drop-shadow(0 20px 40px rgba(120, 0, 0, .35));
 }
-@keyframes meRise { from { opacity: 0; transform: translateY(18%) scale(.96); filter: blur(10px); } }
+@keyframes meRise { from { opacity: 0; transform: translateY(18%) scale(.96); } }
 
 /* sparkles */
 .sparkle { position: absolute; fill: var(--white); z-index: 1; animation: twinkle 4s ease-in-out infinite; }
@@ -504,9 +504,9 @@ button { font: inherit; cursor: pointer; }
 }
 .hero__name .split-ready .ch { transition: none; opacity: 1; filter: none; transform: none; }
 @keyframes dropIn {
-  from { opacity: 0; transform: translateY(-.6em) scaleY(1.5) scaleX(.8); filter: blur(12px); }
-  40% { opacity: 1; filter: blur(0); }
-  to { opacity: 1; transform: none; filter: none; }
+  from { opacity: 0; transform: translateY(-.6em) scaleY(1.5) scaleX(.8); }
+  40% { opacity: 1; }
+  to { opacity: 1; transform: none; }
 }
 .hero__intro, .hero__actions, .hero__corner { animation: fadeUp 1s var(--expo) both; }
 .hero__intro { animation-delay: 1s; }
