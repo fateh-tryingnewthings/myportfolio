@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1092 720" fill="none">
+  <!-- Original laptop mockup. The screen (x112 y96 868x544) is a see-through hole. -->
+  <defs>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9d9de"/>
+      <stop offset="1" stop-color="#8e8e94"/>
+    </linearGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f4f6"/>
+      <stop offset=".35" stop-color="#dcdce0"/>
+      <stop offset=".75" stop-color="#b9b9bf"/>
+      <stop offset="1" stop-color="#7d7d83"/>
+    </linearGradient>
+    <linearGradient id="baseSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity=".22"/>
+      <stop offset=".06" stop-color="#000" stop-opacity="0"/>
+      <stop offset=".94" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".22"/>
+    </linearGradient>
+    <linearGradient id="scoop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a9a9ae"/>
+      <stop offset="1" stop-color="#e6e6ea"/>
+    </linearGradient>
+    <linearGradient id="glare" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".07"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- lid: aluminium rim, then black bezel with the screen cut out -->
+  <path fill="url(#rim)" fill-rule="evenodd"
+    d="M126 62h840a28 28 0 0 1 28 28v586H98V90a28 28 0 0 1 28-28Z
+       M112 106a10 10 0 0 1 10-10h848a10 10 0 0 1 10 10v534H112Z"/>
+  <path fill="#0b0b0c" fill-rule="evenodd"
+    d="M127 65h838a26 26 0 0 1 26 26v583H101V91a26 26 0 0 1 26-26Z
+       M112 106a10 10 0 0 1 10-10h848a10 10 0 0 1 10 10v534H112Z"/>
+  <!-- subtle glass glare on the bezel -->
+  <path fill="url(#glare)" fill-rule="evenodd"
+    d="M127 65h838a26 26 0 0 1 26 26v583H101V91a26 26 0 0 1 26-26Z
+       M112 106a10 10 0 0 1 10-10h848a10 10 0 0 1 10 10v534H112Z"/>
+
+
+  <!-- chin + hinge -->
+  <rect x="101" y="640" width="890" height="34" fill="#141416"/>
+  <rect x="101" y="670" width="890" height="4" fill="#2b2b2e"/>
+
+  <!-- base -->
+  <path fill="url(#base)" d="M24 674h1044v14c0 12-10 20-24 20H48c-14 0-24-8-24-20Z"/>
+  <path fill="url(#baseSide)" d="M24 674h1044v14c0 12-10 20-24 20H48c-14 0-24-8-24-20Z"/>
+  <path stroke="#ffffff" stroke-opacity=".8" stroke-width="1.5" d="M30 675.5h1032"/>
+  <!-- thumb scoop -->
+  <path fill="url(#scoop)" d="M466 674h160v4c0 6-5 10-11 10H477c-6 0-11-4-11-10Z"/>
+  <!-- feet -->
+  <rect x="70" y="706" width="70" height="6" rx="3" fill="#5c5c62"/>
+  <rect x="952" y="706" width="70" height="6" rx="3" fill="#5c5c62"/>
+</svg>
