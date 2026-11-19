@@ -165,6 +165,7 @@
     const heroInner = document.querySelector(".hero__inner");
     const heroSection = document.querySelector(".hero");
     const sparkles = document.querySelectorAll(".hero .sparkle");
+    const heroMe = document.querySelector(".hero__me");
     const heroChars = heroName ? [...heroName.querySelectorAll(".ch")].map((el) => ({
       el,
       outline: !!el.closest(".hero__line--outline"),
@@ -200,6 +201,7 @@
         const p = sy / vh;
         heroInner.style.transform = `translate3d(0, ${(sy * 0.28).toFixed(1)}px, 0) scale(${(1 - p * 0.06).toFixed(4)})`;
         heroInner.style.opacity = String(Math.max(0, 1 - p * 1.1));
+        if (heroMe) heroMe.style.translate = `0 ${(sy * 0.12).toFixed(1)}px`;
         sparkles.forEach((s, i) => {
           s.style.rotate = `${sy * (0.12 + i * 0.06)}deg`;
           s.style.translate = `0 ${sy * (0.1 + i * 0.08)}px`;

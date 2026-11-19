@@ -182,11 +182,21 @@ button { font: inherit; cursor: pointer; }
 .hero__corner--br { bottom: 28px; right: var(--gutter); text-align: right; }
 
 
+/* portrait: sits behind the big name, like the type-over-photo reference */
+.hero__me {
+  position: absolute; z-index: 1; bottom: 0; right: clamp(0px, 6vw, 110px);
+  height: min(80svh, 780px); width: auto; max-width: 44vw; object-fit: contain; object-position: bottom;
+  pointer-events: none; user-select: none;
+  animation: meRise 1.4s var(--spring) .35s both;
+  filter: drop-shadow(0 20px 40px rgba(120, 0, 0, .35));
+}
+@keyframes meRise { from { opacity: 0; transform: translateY(18%) scale(.96); filter: blur(10px); } }
+
 /* sparkles */
 .sparkle { position: absolute; fill: var(--white); z-index: 1; animation: twinkle 4s ease-in-out infinite; }
-.sparkle--1 { width: clamp(56px, 10vw, 150px); top: 20%; right: 12%; }
-.sparkle--2 { width: clamp(34px, 4.5vw, 64px); top: 11%; right: 6%; animation-delay: -1.4s; }
-.sparkle--3 { width: clamp(24px, 3vw, 42px); top: 33%; right: 21%; animation-delay: -2.6s; }
+.sparkle--1 { width: clamp(56px, 7vw, 110px); top: 38%; right: 4%; }
+.sparkle--2 { width: clamp(30px, 4vw, 56px); top: 15%; right: 5%; animation-delay: -1.4s; }
+.sparkle--3 { width: clamp(24px, 3vw, 42px); top: 52%; right: 37%; animation-delay: -2.6s; }
 .sparkle--c { width: clamp(80px, 12vw, 170px); top: 12%; right: 8%; }
 @keyframes twinkle {
   0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
@@ -566,6 +576,8 @@ button { font: inherit; cursor: pointer; }
 }
 
 @media (max-width: 860px) {
+  .hero { flex-direction: column; justify-content: flex-start; padding-bottom: 56px; }
+  .hero__me { position: relative; right: auto; align-self: center; height: auto; width: min(82vw, 380px); max-width: none; margin: 8px 0 0; }
   .nav__links { display: none; }
   .hero__corner--tr { display: none; }
   .stats__grid { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
